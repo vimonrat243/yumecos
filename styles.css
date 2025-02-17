@@ -1,0 +1,334 @@
+/* แถบ */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF9CB6;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  color: #FF9CB6;
+  background-color: #ffffff;
+}
+
+/* รูปสไลด์ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 1980px;
+            height: 650px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            height: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .dots-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #717171;
+        }
+
+/* รายละเอียดหน้า */
+
+body {
+  font-family: "Noto Sans Thai", serif;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* รูปภาพโปรโมชั่น */
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+  width: 700px;
+  height: 700px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.1); /* ขยายขนาดรูปเมื่อ hover */
+}
+
+.button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #FF9CB6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f54473;
+  transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อ hover */
+}
+
+.image-box.active img {
+  transform: scale(1.2); /* ขยายขนาดรูปเมื่อคลิก */
+}
+
+.image-box.active .button {
+  transform: scale(1.2); /* ขยายขนาดปุ่มเมื่อคลิก */
+}
+
+
+/* กล่องข้อความ */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: calc(50% - 10px);
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+.box img {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+.box .text {
+  flex: 1;
+}
+.box .text h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+.box .text p {
+  margin: 10px 0 0;
+  color: #555;
+}
+
+.box:hover {
+  transform: scale(1.1); /* ขยายขนาดรูปเมื่อ hover */
+}
+.box.active {
+  transform: scale(1.2); /* ขยายขนาดรูปเมื่อคลิก */
+}
+
+/* ตกแต่งปุ่ม */
+.btn-link {
+  background-color: #FF9CB6; /* สีพื้นหลัง */
+  color: #ffffff; /* สีข้อความ */
+  padding: 15px 32px; /* ขนาดปุ่ม */
+  text-align: center; /* จัดตำแหน่งข้อความ */
+  text-decoration: none; /* ไม่ให้มีขีดเส้นใต้ */
+  display: inline-block; /* ทำให้เป็นปุ่ม */
+  font-size: 16px; /* ขนาดตัวอักษร */
+  border-radius: 12px; /* มุมโค้ง */
+  transition: background-color 0.3s; /* ทำให้เปลี่ยนสีพื้นหลังเมื่อ hover */
+}
+
+.btn-link:hover {
+  color: #ffffff;
+  background-color: #f54473; /* สีพื้นหลังเมื่อ hover */
+}
+
+/* สไตล์ของแถบค้นหา */
+.search-container {
+  float: center; /* วางแถบค้นหาทางขวา */
+}
+
+.search-container input[type="text"] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  width: 200px; /* ความกว้างของช่องค้นหา */
+  border-radius: 4px; /* มุมโค้ง */
+}
+
+.search-container button {
+  padding: 6px 10px;
+  background-color: #f54473; /* สีพื้นหลังของปุ่มค้นหา */
+  color: white; /* สีข้อความของปุ่ม */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* ทำให้ปุ่มคลิกได้ */
+}
+
+.search-container button:hover {
+  color: #FF9CB6;
+  background-color: #ffffff; /* เปลี่ยนสีเมื่อเอาเมาส์ชี้ */
+}
+
+
+/* หน้า SHOP */
+
+.containers { max-width: 1200px; margin: auto; }
+        .section { background: white; padding: 20px; border-radius: 10px; }
+        h2 { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .item { background: #fff; padding: 15px; text-align: center; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;}
+        .item img { width: 100%; height: auto; border-radius: 5px; }
+
+
+        .item:hover {
+          transform: scale(1.1); /* ขยายขนาดรูปเมื่อ hover */
+        }
+        .item.active {
+            transform: scale(1.2); /* ขยายขนาดรูปเมื่อคลิก */
+        }
+        
+        .btn { margin-top: 10px; padding: 8px 12px; background: #FF9CB6; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .btn:hover { background: #f54473; }
+        .all { margin-top: 10px; padding: 12px 16px; background: #FF9CB6; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .all:hover { background: #f54473; }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .grid { grid-template-columns: repeat(1, 1fr); }
+        }
+
+
+/* หน้า HOW TO ORDER */
+
+.containeres {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+ 
+    h1 {
+      text-align: center;
+      color: #333;
+      }
+    ol {
+      padding-left: 20px;
+      }
+    ol li {
+      margin: 10px 0;
+      font-size: 18px;
+      }
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    }
+
+.image-containers {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+
+.image-containers img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    }     
+
+  .button-shop {
+    font-size: 24px;
+    padding: 20px 40px;
+    background-color: #FF9CB6;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s; 
+  }
+  .button-shop:hover {
+      background-color: #f54473;
+  }
+
+/* ส่วนสุดท้ายของเว็บ */
+
+  .footers {
+    background-color: #FF9CB6;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}

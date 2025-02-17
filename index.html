@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">YumeCosplay Shop</div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="page1.html">ABOUT</a>
+            <a href="page2.html">SHOP</a>
+            <a href="page3.html">HOW TO ORDER</a>
+            <a href="page4.html">CONTACT</a>
+        </div>
+        <!-- แถบค้นหา -->
+        <div class="search-container">
+        <input type="text" placeholder="ค้นหา...">
+        <button type="submit">ค้นหา</button>
+    </div>
+    </nav>
+
+    <div class="slider">
+        
+        <div class="slides">
+            <img src="https://img5.pic.in.th/file/secure-sv1/YumeCosplayShop44c49e912c6c6e35.png" alt="Slide 1" class="slide fade">
+            <img src="https://img2.pic.in.th/pic/Yume.png" alt="Slide 2" class="slide fade">
+            <img src="https://img2.pic.in.th/pic/Yumeme843a3229af7f125d.png" alt="Slide 3" class="slide fade">
+        </div>
+        
+    </div>
+
+    <div class="dots-container">
+      <span class="dot" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+  </div>
+  <script>
+      let currentIndex = 0;
+      const slides = document.querySelector('.slides');
+      const dots = document.querySelectorAll('.dot');
+      
+      function goToSlide(index) {
+          currentIndex = index;
+          updateSlider();
+      }
+      
+      function updateSlider() {
+          slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+          dots.forEach((dot, i) => {
+              dot.classList.toggle('active', i === currentIndex);
+          });
+      }
+      updateSlider();
+    </script>
+
+    <br>
+    <br>
+
+    <main>
+        <center><h1>ยินดีต้อนรับสู่ร้านของเรา</h1></center>
+        <center><p>ร้านที่จำหน่ายชุดเสื้อผ้า อุปกรณ์คอสเพลย์ จากอนิเมะและการ์ตูนมากมาย มากกว่า 1000 เรื่อง ในราคาสุดคุ้ม</p></center>
+    </main>
+
+    
+    <!--ส่วนเนื้อหาโฮม 1-->
+
+    <div class="container">
+        <div class="box">
+          <div class="text">
+            <h3>ชุดเยอะ ไม่ต้องกลัวมีน้อย</h3>
+            <p>มีให้เลือกซื้อมากมาย ทั้งเสื้อผ้า อุปกรณ์ วิกผม รองเท้า</p>
+            <a href="page2.html" class="btn-link">ดูรายละเอียด</a>
+          </div>
+          <img src="https://img2.pic.in.th/pic/pro3d0f8d0ea065c4529.png" alt="Image 1">
+        </div>
+    
+        <div class="box">
+          <div class="text">
+            <h3>การสั่งซื้อที่ง่ายดาย</h3>
+            <p>ช่องทางการชำระเงินที่หลากหลาย ขั้นตอนไม่ซับซ้อน</p>
+            <a href="page3.html" class="btn-link">ดูรายละเอียด</a>
+          </div>
+          <img src="https://img5.pic.in.th/file/secure-sv1/pro2898f12d611a3f73e.png" alt="Image 2">
+        </div>
+    
+        <div class="box">
+          <div class="text">
+            <h3>จัดส่งเร็ว ไม่ต้องรอนาน</h3>
+            <p>ร้านค้าของเรามีการจัดส่งทุกวัน หากชำระเงินเรียบร้อย จัดส่งวันต่อไปทันที</p>
+            <a href="page3.html" class="btn-link">ดูรายละเอียด</a>
+          </div>
+          <img src="https://img5.pic.in.th/file/secure-sv1/pro1cc13c032b7b26b40.png" alt="Image 3">
+        </div>
+    
+        <div class="box">
+          <div class="text">
+            <h3>สินค้าเสียหาย เราพร้อมรับผิดชอบ</h3>
+            <p>หากสินค้าที่ลูกค้าได้รับชำรุดหรือเสียหายต่างๆ ทางร้านจะชดเชยส่วนหนึ่งให้ทันที</p>
+            <a href="page1.html" class="btn-link">ดูรายละเอียด</a>
+          </div>
+          <img src="https://png.pngtree.com/png-clipart/20230825/original/pngtree-medical-insurance-doctor-health-insure-picture-image_8729087.png" alt="Image 4">
+        </div>
+      </div>
+
+      <!--ส่วนเนื้อหาโฮม 2-->
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <h1>โปรโมชั่นและอื่นๆ</h1>
+
+      <div class="image-container">
+        <div class="image-box" id="image1">
+          <img src="https://img2.pic.in.th/pic/pro139e31589bc302017.png" alt="Image 1">
+          <a class="button">คลิก</a>
+        </div>
+        <div class="image-box" id="image2">
+          <img src="https://img2.pic.in.th/pic/pro21066e9c61ecd2396.png" alt="Image 2">
+          <a class="button">คลิก</a>
+        </div>
+        <div class="image-box" id="image3">
+          <img src="https://img5.pic.in.th/file/secure-sv1/pro3e35422da12b3fba8.png" alt="Image 3">
+          <a class="button">คลิก</a>
+        </div>
+      </div>
+    
+      <script>
+        function enlargeImage(imageId) {
+          const images = document.querySelectorAll('.image-box');
+          images.forEach((image) => {
+            if (image.id === imageId) {
+              image.classList.toggle('active');
+            } else {
+              image.classList.remove('active');
+            }
+          });
+        }
+      </script>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+<div class="footers">
+   Copyright 2025 &copy; YumeCosplayShop
+</div>
+
+</body>
+</html>
+
+
+
+
+
+

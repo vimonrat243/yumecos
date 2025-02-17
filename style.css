@@ -1,0 +1,226 @@
+/* หน้า ABOUT */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  .container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    gap: 15px;
+    padding: 20px;
+  }
+  .left-box {
+    width: 45%;
+    height: 450px;
+    position: relative;
+  }
+  .right-boxes {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 174px; /* Make the height of right boxes the same as the left box */
+  }
+  .right-box {
+    width: calc(50% - 10px); /* Equal size for each box */
+    height: 100%; /* Make sure the height is the same as the left box */
+    position: relative;
+  }
+  .image-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  .image-box img:hover {
+    transform: scale(1.1); /* ขยายขนาดรูปเมื่อ hover */
+  }
+  .image-box img.active {
+      transform: scale(1.2); /* ขยายขนาดรูปเมื่อคลิก */
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .text-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+body {
+    font-family: "Noto Sans Thai", serif;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+/* รูปสไลด์ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 1980px;
+            height: 650px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            height: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .dots-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #717171;
+        }
+
+        /* แถบ */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FF9CB6;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+          }
+          
+          .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+          }
+          
+          .nav-links {
+            display: flex;
+            gap: 20px;
+          }
+          
+          .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
+          }
+          
+          .nav-links a:hover {
+            color: #FF9CB6;
+            background-color: #ffffff;
+          }
+
+          /* สไตล์ของแถบค้นหา */
+.search-container {
+    float: center; /* วางแถบค้นหาทางขวา */
+  }
+  
+  .search-container input[type="text"] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    width: 200px; /* ความกว้างของช่องค้นหา */
+    border-radius: 4px; /* มุมโค้ง */
+  }
+  
+  .search-container button {
+    padding: 6px 10px;
+    background-color: #f54473; /* สีพื้นหลังของปุ่มค้นหา */
+    color: white; /* สีข้อความของปุ่ม */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* ทำให้ปุ่มคลิกได้ */
+  }
+  
+  .search-container button:hover {
+    color: #FF9CB6;
+    background-color: #ffffff; /* เปลี่ยนสีเมื่อเอาเมาส์ชี้ */
+  }
+  
+ /* Contact */
+
+.containers {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h2 {
+    text-align: center;
+}
+label {
+    font-weight: bold;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.containers button {
+    width: 100%;
+    padding: 10px;
+    background: #FF9CB6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.containers button:hover {
+    background: #f54473;
+}
+
+/* ส่วนสุดท้ายของเว็บ */
+
+.footers {
+    background-color: #FF9CB6;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
